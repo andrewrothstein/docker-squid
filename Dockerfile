@@ -1,8 +1,8 @@
 FROM ubuntu
 MAINTAINER Andrew Rothstein "andrew.rothstein@gmail.com"
 
-RUN apt-get update
-RUN apt-get install -y squid3
+RUN DEBIAN_FRONTEND=noninteractive apt-get update
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y squid3
 
 ADD squid.conf /etc/squid3/squid.conf
 
